@@ -44,18 +44,22 @@ namespace UI
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            app.UseStaticFiles();
+            Test(app);
             app.UseMvc(routes =>
             {
-            routes.MapRoute(
-                name: "deflut",
-                template: "{controller=Home}/{action=Index}/{id?}"
-                    );
+                routes.MapRoute(
+                    name: "deflut",
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                        );
             });
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");
             //});
+        }
+
+        public void Test(IApplicationBuilder app)
+        {
         }
     }
 }
