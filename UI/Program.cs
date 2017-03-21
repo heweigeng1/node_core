@@ -15,7 +15,7 @@ namespace UI
                 .UseKestrel()//Kestrel服务器
                 .UseContentRoot(Directory.GetCurrentDirectory())//系统根目录
                 .UseIISIntegration()//IIS集成
-                .UseStartup<Startup>()//使用过owin的应该就不会陌生
+                .UseStartup<Startup>()//使用过owin的应该会微微一笑
                 .UseApplicationInsights()//这好像是一个新的 微软服务?
                 .Build();
 
