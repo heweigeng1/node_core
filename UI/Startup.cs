@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using UI.Extensions;
 
 namespace UI
 {
@@ -44,7 +45,7 @@ namespace UI
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            Test(app);
+            app.Write("测试");
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
