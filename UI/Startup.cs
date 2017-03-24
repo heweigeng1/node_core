@@ -37,13 +37,13 @@ namespace UI
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
+            if (env.IsDevelopment())//开发状态
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();//捕获异常,并生成html页面
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Home/Error");//捕获管道中的异常,并重定到指定的错误页
             }
             app.Write("测试");
             app.UseMvc(routes =>
@@ -53,10 +53,6 @@ namespace UI
                     template: "{controller=Home}/{action=Index}/{id?}"
                         );
             });
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
         }
 
         public void Test(IApplicationBuilder app)
