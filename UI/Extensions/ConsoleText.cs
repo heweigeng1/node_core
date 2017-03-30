@@ -11,9 +11,9 @@ namespace UI.Extensions
         public static void Write(this IApplicationBuilder app ,string msg)
         {
             dynamic dic;
-            app.Run((context) => {
-                dic = context.Response.StatusCode;
-                Console.WriteLine($"msg:{ context.Response.StatusCode}");
+            app.Use((context) => {
+                //dic = context.Response.StatusCode;
+                //Console.WriteLine($"msg:{ context.Response.StatusCode}");
                 return null;
             });
             int i = 100;

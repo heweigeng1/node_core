@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{33BAF309-DC6B-478C-B1CC-AEEA6ADA40A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core_autofac", "core_autofac\core_autofac.csproj", "{8548D783-0DD1-4182-9FBD-8D888B87A9D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{33BAF309-DC6B-478C-B1CC-AEEA6ADA40A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33BAF309-DC6B-478C-B1CC-AEEA6ADA40A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33BAF309-DC6B-478C-B1CC-AEEA6ADA40A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8548D783-0DD1-4182-9FBD-8D888B87A9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8548D783-0DD1-4182-9FBD-8D888B87A9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8548D783-0DD1-4182-9FBD-8D888B87A9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8548D783-0DD1-4182-9FBD-8D888B87A9D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
