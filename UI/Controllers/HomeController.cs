@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UI.DI;
 using System.Threading;
+using Microsoft.AspNetCore.Mvc.Filters;
+using UI.Filters;
 
 namespace UI.Controllers
 {
@@ -24,6 +26,7 @@ namespace UI.Controllers
             ViewData["time"] = _datetime.Now.ToString();
             return View();
         }
+        [Test("tom","Attribute")]
         /// <summary>
         /// FromServices ±ê¼Ç×¢Èë
         /// </summary>

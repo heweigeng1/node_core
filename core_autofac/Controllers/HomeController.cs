@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using core_autofac.Service;
+using core_autofac.Models;
 
 namespace core_autofac.Controllers
 {
@@ -37,6 +38,10 @@ namespace core_autofac.Controllers
         public IActionResult Error()
         {
             return View();
+        }
+        public IActionResult TagHelper()
+        {
+            return View(new UserInfoDto { Age=20,UserName="TOM"});
         }
     }
 }

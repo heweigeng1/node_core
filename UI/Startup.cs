@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using UI.Extensions;
 using UI.DI;
+using UI.Filters;
 
 namespace UI
 {
@@ -29,7 +30,7 @@ namespace UI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();//添加MVC服务
+            services.AddMvc(options=> { options.Filters.Add(typeof(TestActionFilters)); } );//添加MVC服务,并且里面添加了一个过滤器
             services.AddTransient<IDateTime, SystemDateTime>();//配置关系
         }
 

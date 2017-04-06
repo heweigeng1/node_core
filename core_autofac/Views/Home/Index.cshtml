@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@inject core_autofac.Service.IMsgService MsgService
 <h1>@ViewData["msg"]</h1>
+<h2>@MsgService.Html()</h2>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
